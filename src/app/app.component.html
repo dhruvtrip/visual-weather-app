@@ -1,10 +1,10 @@
 <div class="container">
   <div class="upper-section">
     <img src="../assets/hot-image.jpeg" alt="hot-image" *ngIf="14 > 15">
-    <img src="../assets/cold-image.jpeg" alt="cold-image" *ngIf="14 <= 15">
+    <img src="../assets/cold-image.jpg" alt="cold-image" *ngIf="14 <= 15">
     <div class="weather-data">
       <div class="location">London</div>
-      <div class="temperature">{{14.50 | number}}</div>
+      <div class="temperature">{{14.50 | number: '1.0-0'}}°C</div>
     </div>
   </div>
   <div class="lower-section"></div>
