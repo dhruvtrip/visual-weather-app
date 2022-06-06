@@ -1,4 +1,6 @@
 <div class="container">
+
+
   <div class="upper-section">
     <img src="../assets/hot-image.jpeg" alt="hot-image" *ngIf="14 > 15">
     <img src="../assets/cold-image.jpg" alt="cold-image" *ngIf="14 <= 15">
@@ -7,6 +9,23 @@
       <div class="temperature">{{14.50 | number: '1.0-0'}}°C</div>
     </div>
   </div>
+
+
   <div class="lower-section"></div>
+  <div class="more-info-label">More Information</div>
+  <div class="more-info-container">
+    <div class="info-block">
+      <div class="info-block-label">
+        <img src="../assets/min.svg" alt="minimum-temperature">
+        <span>min</span>
+        <div>
+          <div class="info-block-value">
+            10°C
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 <router-outlet></router-outlet>

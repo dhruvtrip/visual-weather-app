@@ -75,3 +75,22 @@ body {
   font-size: 4em;
   font-weight: 900;
 }
+
+.more-info-label {
+  color: var(--white);
+}
+
+.more-info-container {
+  flex: 1;
+  background-color: var(--shadow-light);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-top: 1em;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-block {
+}
