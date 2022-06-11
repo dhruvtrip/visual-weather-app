@@ -10,13 +10,24 @@ import { WeatherService } from './services/weather.service';
 export class AppComponent implements OnInit {
   constructor(private weatherService: WeatherService) {}
   weatherData?: WeatherData;
+  cityName: string = 'Oslo'; // default city on init
+
   ngOnInit(): void {
-    this.weatherService.getWeatherData('Tokyo').subscribe({
+    this.getWeatherData(this.cityName);
+    this.cityName = ''; // search bar remains blank
+  }
+
+  onSubmit() {
+    this.getWeatherData(this.cityName);
+    this.cityName = '';
+  }
+
+  private getWeatherData(cityName: string) {
+    this.weatherService.getWeatherData(cityName).subscribe({
       next: (response) => {
         this.weatherData = response; //assign the API data to the response
         console.log(response);
       },
     });
-    throw new Error('Method not implemented.');
   }
 }

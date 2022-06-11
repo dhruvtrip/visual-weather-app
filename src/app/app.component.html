@@ -1,7 +1,7 @@
 <!-- Search form section -->
 <div class="search">
-  <form>
-    <input type="text" placeholder="Search City">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="Search City" name="city" [(ngModel)]="cityName">
   </form>
 </div>
 <!-- Weather data section -->
