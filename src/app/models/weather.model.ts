@@ -1,3 +1,4 @@
+//Weather data interface for Type
 export interface WeatherData {
   coord: Coord;
   weather: Weather[];
